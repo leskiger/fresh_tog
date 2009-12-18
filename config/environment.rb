@@ -9,6 +9,7 @@ require File.join(File.dirname(__FILE__), 'boot')
 
 require 'desert'
 Rails::Initializer.run do |config|
+  config.gem 'RedCloth', :lib => 'redcloth', :source => 'http://code.whytheluckystiff.net'
   config.reload_plugins = true if RAILS_ENV == 'development'
   config.gem 'rubyist-aasm', :lib => 'aasm', :version => '~> 2.1.1'
   config.gem 'linkingpaths-acts_as_abusable', :lib => 'acts_as_abusable', :version => '0.0.2'
